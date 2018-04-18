@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(204, 204, 204);
+}
+
+#drumroll {
+    margin: 40px auto;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+#selectBox {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: repeating-linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(151, 151, 151) 3.5%, rgb(218, 218, 218) 4%, rgb(255, 255, 255) 10%, rgb(255, 255, 255) 90%, rgb(218, 218, 218) 96%, rgb(151, 151, 151) 96.5%, rgb(255, 255, 255) 100%);
+}
+
+#drumroll::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background: linear-gradient(to bottom, rgba(226, 226, 226, 0.8) 0%, rgba(171, 171, 171, 0.4) 10%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 60%, rgba(171, 171, 171, 0.4) 90%, rgba(226, 226, 226, 0.8) 100%)
+}
+
+#drumroll+p {
+    text-align: center;
+}
+
+.drumul {
+    width: 100%;
+    height: 80px;
+    font-size: 42px;
+    font-weight: bold;
+    list-style-type: none;
+    text-align: center;
+    transform: translateY(0);
+}
+
+.drumul li {
+    width: 100%;
+    height: 100%;
+    display: table;
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.2s;
+    color: #464646;
+}
+
+.drumul li.now {
+    transform: scale(1.2);
+    color: #000;
+}
+
+.drumul li span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#result {
+    font-size: 120%;
+    font-weight: bold;
+}
